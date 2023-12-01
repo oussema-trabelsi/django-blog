@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 def validate_image_dimensions(image):
     image = Image.open(image)
     min_width = 1000
-    min_height = 1000
+    min_height = 500
     if image.width < min_width or image.height < min_height:
         raise ValidationError(f"The image must be at least {min_width}x{min_height} pixels.")
 
